@@ -1,3 +1,13 @@
+#header a {
+	color: rgba(93, 101, 153, 0.74);
+	font-weight: 400;
+}
+
+#header a {
+	color: rgba(93, 101, 153, 0.74);
+	font-weight: 400;
+}
+
 #app {
 	min-width: 300px;
 	max-width: 576px;
@@ -12,4 +22,8 @@
 		transparent 40%
 	);
 	background-repeat: no-repeat;
+}
+
+#loading-mask {
+	z-index: 2000;
 }
