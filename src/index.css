@@ -1,18 +1,3 @@
-#header a {
-	color: rgba(93, 101, 153, 0.74);
-	font-weight: 400;
-}
-
-#header a {
-	color: rgba(93, 101, 153, 0.74);
-	font-weight: 400;
-}
-
-#app {
-	min-width: 300px;
-	max-width: 576px;
-}
-
 #app-container {
 	height: 100vh;
 	width: 100vw;
@@ -26,4 +11,19 @@
 
 #loading-mask {
 	z-index: 2000;
+}
+
+#app {
+	min-width: 300px;
+	max-width: 576px;
+}
+
+#header a {
+	color: rgba(93, 101, 153, 0.74);
+	font-weight: 400;
+}
+
+nav li a {
+	height: 40px;
+	line-height: 40px;
 }
