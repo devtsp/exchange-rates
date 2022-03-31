@@ -9,24 +9,27 @@ const SelectCurrency = ({ id, name, defaultSelected, classes }) => {
 	useEffect(() => {
 		if (!codes.length) {
 			dispatch(getCodes());
+		} else {
+			// document.querySelector(
+			// 	`#${id} option [value=USD]`
+			// ).defaultSelected = true;
+			console.log(document.querySelector(`#${id} option [vale=ARS]`));
 		}
-	}, [dispatch, codes]);
+	}, [dispatch, codes, id]);
 
 	return (
-		<>
-			<select
-				id={id}
-				name={name}
-				className={classes}
-				defaultValue={defaultSelected}
-			>
-				{codes.map(code => (
-					<option key={code[0]} value={code[0]}>
-						{`${code[0]} (${code[1]})`}
-					</option>
-				))}
-			</select>
-		</>
+		<select
+			id={id}
+			name={name}
+			className={classes}
+			defaultValue={defaultSelected}
+		>
+			{codes.map(code => (
+				<option key={code[0]} value={code[0]}>
+					{`${code[0]} (${code[1]})`}
+				</option>
+			))}
+		</select>
 	);
 };
 

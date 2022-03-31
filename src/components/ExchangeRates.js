@@ -19,7 +19,7 @@ const ExchangeRates = () => {
 					<SelectCurrency
 						id="rates-base"
 						name="base"
-						default="USD"
+						defaultSelected="USD"
 						classes="w-75 form-select form-select-sm "
 					/>
 
