@@ -1,4 +1,4 @@
-import React from 'react';
+import SelectCurrency from './SelectCurrency';
 
 const PairConversion = () => {
 	return (
@@ -28,21 +28,33 @@ const PairConversion = () => {
 					<label htmlFor="conversion-origin" className="form-label">
 						Base Currency:
 					</label>
-					<select
+					<SelectCurrency
+						name="origin"
+						id="conversion-origin"
+						defaultSelected="USD"
+						classes={'w-75 form-select form-select-sm mb-2'}
+					/>
+					{/* <select
 						name="origin"
 						className="w-75 form-select form-select-sm mb-2"
 						aria-label="Select Origin Currency"
 						id="conversion-origin"
-					></select>
+					></select> */}
 					<label htmlFor="target" className="form-label">
 						Target Currency:
 					</label>
-					<select
+					<SelectCurrency
+						name="target"
+						id="target"
+						defaultSelected="ARS"
+						classes={'w-75 form-select form-select-sm'}
+					/>
+					{/* <select
 						name="target"
 						className="w-75 form-select form-select-sm"
 						aria-label="Select Target Currency"
 						id="target"
-					></select>
+					></select> */}
 					<button
 						className="btn btn-outline-success btn-sm px-3 my-3"
 						cy-data="conversion-submit"

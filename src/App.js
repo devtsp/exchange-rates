@@ -1,19 +1,25 @@
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import { Provider } from 'react-redux';
+import { store } from './Redux/store';
 import Layout from './Layout';
-import ExchangeRates from './ExchangeRates';
-import PairConversion from './PairConversion';
+import ExchangeRates from './components/ExchangeRates';
+import PairConversion from './components/PairConversion';
 
 function App() {
 	return (
 		<div id="app-container">
-			<Routes>
-				<Route path="/" element={<Layout />}>
-					<Route index element={<ExchangeRates />} />
-					<Route path="pair-conversion" element={<PairConversion />} />
-				</Route>
-				<Route path="*" element={<h1>Missing</h1>} />
-			</Routes>
+			<Provider store={store}>
+				<Router>
+					<Routes>
+						<Route path="/" element={<Layout />}>
+							<Route index element={<ExchangeRates />} />
+							<Route path="pair-conversion" element={<PairConversion />} />
+						</Route>
+						<Route path="*" element={<h1>Missing</h1>} />
+					</Routes>
+				</Router>
+			</Provider>
 		</div>
 	);
 }

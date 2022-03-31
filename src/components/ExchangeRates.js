@@ -1,3 +1,5 @@
+import SelectCurrency from './SelectCurrency';
+
 const ExchangeRates = () => {
 	return (
 		<div
@@ -14,11 +16,13 @@ const ExchangeRates = () => {
 					<label className="form-label mb-2" htmlFor="rates-base">
 						Select base currency
 					</label>
-					<select
+					<SelectCurrency
 						id="rates-base"
 						name="base"
-						className="form-select form-select-sm m-0 w-75"
-					></select>
+						default="USD"
+						classes="w-75 form-select form-select-sm "
+					/>
+
 					<button className="btn btn-outline-success btn-sm px-3 my-3">
 						Get Rates
 					</button>
@@ -45,11 +49,6 @@ const ExchangeRates = () => {
 					<tbody className="overflow-auto"></tbody>
 				</table>
 			</div>
-			<div
-				className="error mx-4 alert alert-danger text-center d-none"
-				role="alert"
-				data-cy="rates-error"
-			></div>
 		</div>
 	);
 };
