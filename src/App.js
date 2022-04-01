@@ -12,7 +12,10 @@ function App() {
 					<Route path="rates" element={<RatesPanel />} />
 					<Route path="pair-conversion" element={<ConversionPanel />} />
 				</Route>
-				<Route path="*" element={<h1>Missing</h1>} />
+				<Route
+					path="*"
+					element={<h4 className="text-center pt-4">(Missing)</h4>}
+				/>
 			</Routes>
 		</div>
 	);
