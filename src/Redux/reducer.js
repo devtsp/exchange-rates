@@ -16,6 +16,16 @@ export const reducer = (state = initialState, { type, payload }) => {
 				...state,
 				loading: !state.loading,
 			};
+		case types.SET_ERROR:
+			return {
+				...state,
+				error: payload,
+			};
+		case types.RESET_ERROR:
+			return {
+				...state,
+				error: null,
+			};
 		case types.SET_RATES_BASE:
 			return {
 				...state,
