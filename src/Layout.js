@@ -7,13 +7,15 @@ import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
 	return (
-		<div id="app">
+		<>
 			<Loading />
-			<Header />
-			<Nav />
-			<Error />
-			<Outlet />
-		</div>
+			<div id="app">
+				<Header />
+				<Nav />
+				<Error />
+				<Outlet />
+			</div>
+		</>
 	);
 };
 
