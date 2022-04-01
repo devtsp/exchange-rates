@@ -1,13 +1,16 @@
 import * as types from './types';
-import axios from 'axios';
 
+/*
+import axios from 'axios';
 const API_URL = 'https://v6.exchangerate-api.com/v6';
 const API_KEY = 'ec7eec5e7967904472b9cf30';
+*/
 
 export const getCodes = () => async dispatch => {
 	/*
 	try {
 	  dispatch(toggleLoading());
+    dispatch(resetError())
 		const {data} = await axios.get(`${API_URL}/${API_KEY}/codes`);
 	  dispatch(setCodes(data.supported_codes));
 	} catch (error) {
@@ -39,6 +42,7 @@ export const getRates = () => async (dispatch, getState) => {
 	/*
 	try {
 	  dispatch(toggleLoading());
+    dispatch(resetError())
 		const {data} = await axios.get(`${API_URL}/${KEY}/latest/${getState().ratesBase}`);
 	  dispatch(setRates(data.conversion_rates));
 	} catch (error) {
@@ -113,6 +117,7 @@ export const getConversion = () => async (dispatch, getState) => {
 	const target = getState().conversionTarget;
 	try {
 	  dispatch(toggleLoading());
+    dispatch(resetError())
 		const { data } = await axios.get(`${API_URL}/${KEY}/pair/${origin}/${target}/${amount}`;
 	  const { base_code, taget_code, conversion_rate} = data
 	  dispatch(setConversionResults({amount: amount, origin: base_code, target: target_code, result: conversion_result});
@@ -161,6 +166,12 @@ const setError = error => {
 	return {
 		type: types.SET_ERROR,
 		payload: error,
+	};
+};
+
+const resetError = () => {
+	return {
+		type: types.RESET_ERROR,
 	};
 };
 

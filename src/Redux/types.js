@@ -1,6 +1,7 @@
 export const SET_CODES = 'SET_CODES';
 export const TOGGLE_LOADING = 'TOGGLE_LOADING';
 export const SET_ERROR = 'SET_ERROR';
+export const RESET_ERROR = 'RESET_ERROR';
 export const SET_RATES_BASE = 'SET_RATES_BASE';
 export const SET_RATES = 'SET_RATES';
 export const SET_CONVERSION_ORIGIN = 'SET_CONVERSION_ORIGIN';
