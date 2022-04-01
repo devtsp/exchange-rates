@@ -20,6 +20,7 @@ export const getCodes = () => async dispatch => {
 	}
   */
 
+	dispatch(toggleLoading());
 	const delayedResponse = new Promise(res => {
 		setTimeout(() => {
 			res({

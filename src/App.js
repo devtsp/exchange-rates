@@ -9,7 +9,7 @@ function App() {
 		<div id="app-container">
 			<Routes>
 				<Route path="/" element={<Layout />}>
-					<Route index element={<RatesPanel />} />
+					<Route path="rates" element={<RatesPanel />} />
 					<Route path="pair-conversion" element={<ConversionPanel />} />
 				</Route>
 				<Route path="*" element={<h1>Missing</h1>} />

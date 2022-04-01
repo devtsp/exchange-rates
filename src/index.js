@@ -11,7 +11,7 @@ ReactDOM.render(
 		<Provider store={store}>
 			<Router>
 				<Routes>
-					<Route path="/exchange-rates/*" element={<App />}></Route>
+					<Route path="exchange-rates/*" element={<App />}></Route>
 				</Routes>
 			</Router>
 		</Provider>

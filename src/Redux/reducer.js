@@ -1,7 +1,7 @@
 import * as types from './types';
 
 const initialState = {
-	loading: true,
+	loading: false,
 	ratesBase: 'USD',
 	conversionOrigin: 'USD',
 	conversionTarget: 'ARS',
