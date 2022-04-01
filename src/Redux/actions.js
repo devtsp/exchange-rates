@@ -163,6 +163,7 @@ const toggleLoading = () => {
 	};
 };
 
+/*
 const setError = error => {
 	return {
 		type: types.SET_ERROR,
@@ -175,6 +176,7 @@ const resetError = () => {
 		type: types.RESET_ERROR,
 	};
 };
+*/
 
 const setCodes = codes => {
 	return {
