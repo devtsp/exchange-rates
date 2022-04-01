@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/exchange-rates/static/css/main.a11609b8.css",
+    "main.js": "/exchange-rates/static/js/main.cf71b241.js",
+    "index.html": "/exchange-rates/index.html",
+    "main.a11609b8.css.map": "/exchange-rates/static/css/main.a11609b8.css.map",
+    "main.cf71b241.js.map": "/exchange-rates/static/js/main.cf71b241.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a11609b8.css",
+    "static/js/main.cf71b241.js"
+  ]
+}
