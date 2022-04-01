@@ -3,6 +3,8 @@ import * as types from './types';
 const initialState = {
 	loading: true,
 	ratesBase: 'USD',
+	conversionOrigin: 'USD',
+	conversionTarget: 'ARS',
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -13,7 +15,6 @@ export const reducer = (state = initialState, { type, payload }) => {
 			return {
 				...state,
 				loading: !state.loading,
-				error: null,
 			};
 		case types.SET_RATES_BASE:
 			return {
@@ -24,6 +25,26 @@ export const reducer = (state = initialState, { type, payload }) => {
 			return {
 				...state,
 				rates: payload,
+			};
+		case types.SET_CONVERSION_AMOUNT:
+			return {
+				...state,
+				conversionAmount: payload,
+			};
+		case types.SET_CONVERSION_ORIGIN:
+			return {
+				...state,
+				conversionOrigin: payload,
+			};
+		case types.SET_CONVERSION_TARGET:
+			return {
+				...state,
+				conversionTarget: payload,
+			};
+		case types.SET_CONVERSION_RESULTS:
+			return {
+				...state,
+				conversionResults: payload,
 			};
 		default:
 			return state;
