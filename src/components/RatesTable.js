@@ -2,10 +2,11 @@ import { useSelector } from 'react-redux';
 
 const RatesTable = () => {
 	const rates = useSelector(state => state.rates);
+	const codes = useSelector(state => state.codes);
 
 	return (
 		<table
-			className={`table table-sm table-hover d-flex flex-column align-items-stretch px-5 overflow-auto ${
+			className={`flex-fill overflow-auto table table-sm table-hover d-flex flex-column align-items-stretch px-5 ${
 				!rates && 'visually-hidden'
 			} `}
 			data-cy="fetched-rates-table"
@@ -24,8 +25,14 @@ const RatesTable = () => {
 				{Object.entries({ ...rates }).map(([tla, exchangeRate], i) => (
 					<tr key={tla} className={`d-flex ${!i && 'table-success'}`}>
 						<th className="w-50" scope="row">
-							{tla}
+							{`${tla}`}{' '}
+							<span className="fw-light">
+								{`(${
+									codes.filter(([codetla, fullName]) => codetla === tla)[0][1]
+								})`}
+							</span>
 						</th>
+
 						<td className="w-50">{exchangeRate}</td>
 					</tr>
 				))}

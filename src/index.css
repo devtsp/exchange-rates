@@ -1,25 +1,37 @@
-#app-container {
-	height: 100vh;
+:root {
 	width: 100vw;
+	height: 100vh;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+#root {
+	height: 100%;
+	width: 100%;
 	background-image: linear-gradient(
 		to top,
-		rgba(145, 149, 177, 0.74),
+		rgba(145, 149, 177, 0.712),
 		transparent 40%
 	);
+}
+
+#App {
+	height: 100%;
+	min-width: 300px;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 0 0 2rem;
 	background-repeat: no-repeat;
 }
 
-#loading-mask {
+#Loading {
 	z-index: 2000;
 }
 
-#app {
-	min-width: 300px;
-	max-width: 360px;
-	margin: 0 auto;
-}
-
-#header a {
+#Header a {
 	color: rgba(93, 101, 153, 0.74);
 	font-weight: 400;
 }

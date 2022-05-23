@@ -18,7 +18,7 @@ const Nav = () => {
 									(isActive ? 'rgba(93, 101, 153, 1)' : 'transparent'),
 							};
 						}}
-						to="rates"
+						to="/"
 					>
 						Exchange Rates
 					</NavLink>

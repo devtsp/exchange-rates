@@ -1,25 +1,22 @@
 import * as types from './types';
 
-/*
 import axios from 'axios';
 const API_URL = 'https://v6.exchangerate-api.com/v6';
 const API_KEY = 'ec7eec5e7967904472b9cf30';
-*/
 
 export const getCodes = () => async dispatch => {
-	/*
 	try {
-	  dispatch(toggleLoading());
-    dispatch(resetError())
-		const {data} = await axios.get(`${API_URL}/${API_KEY}/codes`);
-	  dispatch(setCodes(data.supported_codes));
+		dispatch(toggleLoading());
+		dispatch(resetError());
+		const { data } = await axios.get(`${API_URL}/${API_KEY}/codes`);
+		dispatch(setCodes(data.supported_codes));
 	} catch (error) {
-	  dispatch(setError(error));
+		dispatch(setError(error));
 	} finally {
-	  dispatch(toggleLoading());
+		dispatch(toggleLoading());
 	}
-  */
 
+	/*
 	dispatch(toggleLoading());
 	const delayedResponse = new Promise(res => {
 		setTimeout(() => {
@@ -37,22 +34,24 @@ export const getCodes = () => async dispatch => {
 	const { data } = await delayedResponse;
 	dispatch(toggleLoading());
 	dispatch(setCodes(data.supported_codes));
+  */
 };
 
 export const getRates = () => async (dispatch, getState) => {
-	/*
 	try {
-	  dispatch(toggleLoading());
-    dispatch(resetError())
-		const {data} = await axios.get(`${API_URL}/${KEY}/latest/${getState().ratesBase}`);
-	  dispatch(setRates(data.conversion_rates));
+		dispatch(toggleLoading());
+		dispatch(resetError());
+		const { data } = await axios.get(
+			`${API_URL}/${API_KEY}/latest/${getState().ratesBase}`
+		);
+		dispatch(setRates(data.conversion_rates));
 	} catch (error) {
-	  dispatch(setError(error));
+		dispatch(setError(error));
 	} finally {
-	  dispatch(toggleLoading());
+		dispatch(toggleLoading());
 	}
-  */
 
+	/*
 	dispatch(toggleLoading());
 	const delayedResponse = new Promise(res => {
 		setTimeout(() => {
@@ -109,27 +108,36 @@ export const getRates = () => async (dispatch, getState) => {
 	const { data } = await delayedResponse;
 	dispatch(toggleLoading());
 	dispatch(setRates(data.conversion_rates));
+  */
 };
 
 export const getConversion = () => async (dispatch, getState) => {
-	/*
 	const amount = getState().conversionAmount;
 	const origin = getState().conversionOrigin;
 	const target = getState().conversionTarget;
 	try {
-	  dispatch(toggleLoading());
-    dispatch(resetError())
-		const { data } = await axios.get(`${API_URL}/${KEY}/pair/${origin}/${target}/${amount}`;
-	  const { base_code, taget_code, conversion_rate} = data
-	  dispatch(setConversionResults({amount: amount, origin: base_code, target: target_code, result: conversion_result});
+		dispatch(toggleLoading());
+		dispatch(resetError());
+		const { data } = await axios.get(
+			`${API_URL}/${API_KEY}/pair/${origin}/${target}/${amount}`
+		);
+		const { base_code, target_code, conversion_result } = data;
+		dispatch(
+			setConversionResults({
+				amount: amount,
+				origin: base_code,
+				target: target_code,
+				result: conversion_result,
+			})
+		);
 	} catch (error) {
-	  dispatch(setError(error));
+		dispatch(setError(error));
 	} finally {
-	  dispatch(toggleLoading());
+		dispatch(toggleLoading());
 	}
-  */
 
-	dispatch(toggleLoading());
+	/*
+  dispatch(toggleLoading());
 	const amount = getState().conversionAmount;
 	console.log(amount);
 	const origin = getState().conversionOrigin;
@@ -155,6 +163,7 @@ export const getConversion = () => async (dispatch, getState) => {
 			result: data.conversion_rate.toFixed(4),
 		})
 	);
+  */
 };
 
 const toggleLoading = () => {
@@ -163,7 +172,6 @@ const toggleLoading = () => {
 	};
 };
 
-/*
 const setError = error => {
 	return {
 		type: types.SET_ERROR,
@@ -176,7 +184,6 @@ const resetError = () => {
 		type: types.RESET_ERROR,
 	};
 };
-*/
 
 const setCodes = codes => {
 	return {

@@ -1,22 +1,34 @@
-import Layout from './Layout';
-import RatesPanel from './components/RatesPanel';
-import ConversionPanel from './components/ConversionPanel';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import { Routes, Route } from 'react-router-dom';
+import { store } from './Redux/store';
+
+import Loading from './util/Loading';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import Error from './components/Error';
+import RatesPanel from './pages/RatesPanel';
+import ConversionPanel from './pages/ConversionPanel';
 
 function App() {
 	return (
-		<div id="app-container">
-			<Routes>
-				<Route path="/" element={<Layout />}>
-					<Route path="rates" element={<RatesPanel />} />
-					<Route path="pair-conversion" element={<ConversionPanel />} />
-				</Route>
-				<Route
-					path="*"
-					element={<h4 className="text-center pt-4">(Missing)</h4>}
-				/>
-			</Routes>
+		<div id="App" className="d-flex flex-column">
+			<Provider store={store}>
+				<Loading />
+				<Router>
+					<Header />
+					<Nav />
+					<Error />
+					<Routes>
+						<Route path="/" element={<RatesPanel />} />
+						<Route path="pair-conversion" element={<ConversionPanel />} />
+						<Route
+							path="*"
+							element={<h4 className="text-center pt-4">(Missing)</h4>}
+						/>
+					</Routes>
+				</Router>
+			</Provider>
 		</div>
 	);
 }

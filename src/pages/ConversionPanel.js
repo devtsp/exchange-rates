@@ -1,5 +1,5 @@
-import ConversionForm from './ConversionForm';
-import ConversionResult from './ConversionResult';
+import ConversionForm from '../components/ConversionForm';
+import ConversionResult from '../components/ConversionResult';
 
 const ConversionPanel = () => {
 	return (

@@ -1,10 +1,16 @@
-# 💰 Exchange Rates 
+## Exchange Rates
 
-### 🚀 [Launch App](https://devtsp.github.io/exchange-rates) 
-___
- ⚠ *Currently working with mocked data (3rd party API quota reached).*
-___
-### 👁 Previews 
+<p align="center">
 
-![rates](https://user-images.githubusercontent.com/87679143/162125991-2257ce15-5e1f-4baf-9fef-43328748542e.png)  ![conversion](https://user-images.githubusercontent.com/87679143/162126187-2dbfb355-b3d0-4e2a-890b-2a9a9d795b9a.png)
+Built with Bootstrap and Redux.
+This app uses https://exchangerate-api.com resources (3rd party)
 
+</p>
+
+### [Launch](https://devtsp.github.io/exchange-rates)
+
+<h3 align="center">Preview</h3>
+<p align="center">
+<img src=".previews/1.jpg">
+<img src=".previews/2.jpg">
+</p>
