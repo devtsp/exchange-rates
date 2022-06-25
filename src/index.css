@@ -1,16 +1,10 @@
-:root {
-	width: 100vw;
-	height: 100vh;
-}
-
-body {
-	height: 100%;
-	width: 100%;
+* {
+	box-sizing: border-box;
 }
 
 #root {
-	height: 100%;
-	width: 100%;
+	min-height: 100vh;
+	min-width: fit-content;
 	background-image: linear-gradient(
 		to top,
 		rgba(145, 149, 177, 0.712),
